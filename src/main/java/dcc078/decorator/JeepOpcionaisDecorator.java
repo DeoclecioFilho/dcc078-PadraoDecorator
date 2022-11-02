@@ -16,20 +16,10 @@ public abstract class JeepOpcionaisDecorator implements Jeep {
         this.jeep = jeep;
     }
 
-    public Jeep getJeep() {
-        return jeep;
-    }
-
-    public void setJeep(Jeep jeep) {
-        this.jeep = jeep;
-    }
-
+    public abstract String getNomeOpcional();
     @Override
     public String getOpcional() {
-        return opcional;
+        return this.jeep.getOpcional()+" + "+ this.getNomeOpcional();
     }
 
-    public void setOpcional(String opcional) {
-        this.opcional = opcional;
-    }
 }
